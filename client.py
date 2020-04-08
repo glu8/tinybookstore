@@ -1,4 +1,6 @@
 import xmlrpclib, sys
+import timeit
+
 
 #specify server hostname as command line argument
 
@@ -7,6 +9,24 @@ name = "http://"+sys.argv[1]+":8888"
 
 server = xmlrpclib.Server(name)
 
+def testSearch():
+
+    start_time = timeit.default_timer()
+
+    for i in range(125):
+        server.sample.search("Distributed Systems")
+        server.sample.search("College Life")
+    
+    return timeit.default_timer() - start_time
+
+def testBuy():
+    
+    start_time = timeit.default_timer()
+    for i in range(125):
+        server.sample.buy("53477")
+        server.sample.buy("12498")
+    
+    return timeit.default_timer() - start_time
 
 while (True):
     input = raw_input("Type your command:\n")
@@ -16,6 +36,10 @@ while (True):
         print("Invalid Command")
     elif len(input) == 1 and input[0].lower() == "quit":
         break
+    elif input[0].lower() == "testsearch":
+        print(testSearch())
+    elif input[0].lower() == "testbuy":
+        print(testBuy())
     elif len(input) < 2:
         print("Invalid Command")
     elif input[0].lower() == "search":

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "This is a shell script"
+python client.py
+search Distributed Systems
