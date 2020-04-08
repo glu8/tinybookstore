@@ -1,0 +1,7 @@
+Compile: javac bookstoreServer.java             Run: java bookstoreServer 
+Compile: javac client.java                      Run: java client host_address
+Compile: n/a                                    Run: python client.py host_address
+
+Client command usage java: method(arg)
+Client command usage python: method arg1 arg2..
+Server command usage: method arg1 arg2...

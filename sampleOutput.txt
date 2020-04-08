@@ -1,0 +1,16 @@
+-> python client.py lohani.cs.williams.edu
+Type your command:
+search Distributed Systems
+Title: Achieve Less Bugs and More Hugs
+ID: 53477
+Title: Distributed Systems for Dummies
+ID: 53573
+Type your command:
+lookup 12498
+Title: Cooking for the Impatient Undergraduate
+Topic: College Life
+Price: $10.0 
+95667 in stock
+Type your command:
+buy 12498
+Purchase Successful! Bought book 12498. Enjoy Your Book :)

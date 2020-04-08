@@ -115,7 +115,7 @@ public class bookstoreServer {
             if (rows < 1){
                 purchaseStatusMsg = "Purchase Denied: Item Out of Stock";
                 } else {
-                purchaseStatusMsg = "Purchase Successful! Enjoy Your Book :)";
+                purchaseStatusMsg = String.format("Purchase Successful! Bought book %s. Enjoy Your Book :)", item_number);
                 csvWriter.append(item_number);
                 csvWriter.append("\n");
     

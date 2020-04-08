@@ -13,7 +13,7 @@ def testSearch():
 
     start_time = timeit.default_timer()
 
-    for i in range(125):
+    for i in range(250):
         server.sample.search("Distributed Systems")
         server.sample.search("College Life")
     
@@ -22,7 +22,7 @@ def testSearch():
 def testBuy():
     
     start_time = timeit.default_timer()
-    for i in range(125):
+    for i in range(250):
         server.sample.buy("53477")
         server.sample.buy("12498")
     
